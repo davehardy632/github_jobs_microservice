@@ -11,7 +11,17 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'faraday'
 gem 'figaro'
+gem 'bcrypt'
+gem 'sass-rails', '~> 5.0'
+gem 'coffee-rails', '~> 4.2'
+gem 'jbuilder', '~> 2.5'
+gem 'jquery'
+gem 'faker'
 gem 'bootstrap-sass'
+gem 'active_model_serializers'
+gem 'will_paginate'
+gem 'acts-as-taggable-on', '~> 6.0'
+# gem 'bootstrap-sass'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -40,15 +50,26 @@ group :development, :test do
  gem 'shoulda-matchers'
  gem 'pry'
  gem 'active_designer'
- gem 'webmock'
+ # gem 'webmock'
  gem 'capybara'
+ gem 'selenium-webdriver'
+ gem 'chromedriver-helper'
+ gem 'devise'
+ gem 'simplecov'
+ gem 'foundation-rails'
+ gem 'database_cleaner'
+ gem 'awesome_print'
 end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'rspec-rails'
 gem 'rspec-rails'
+gem 'fast_jsonapi'
