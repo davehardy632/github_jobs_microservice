@@ -2,7 +2,7 @@ class Api::V1::ListingsController < ApplicationController
 
   def index
     if listings_params.include?("location") || listings_params.include?("keywords")
-      render json: ListingsSerializer.new(listings_facade)
+      render json: JSON.parse(listings_facade.return_all_listings.to_json())
     else
       payload = {
         error: "Missing required parameters",
@@ -21,5 +21,5 @@ class Api::V1::ListingsController < ApplicationController
   def listings_facade
     ListingsFacade.new(listings_params["keywords"], listings_params["location"], listings_params["radius"], listings_params["salary"], listings_params["page"])
   end
-  
+
 end
