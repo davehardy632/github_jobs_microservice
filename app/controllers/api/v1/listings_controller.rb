@@ -21,4 +21,5 @@ class Api::V1::ListingsController < ApplicationController
   def listings_facade
     ListingsFacade.new(listings_params["keywords"], listings_params["location"], listings_params["radius"], listings_params["salary"], listings_params["page"])
   end
+  
 end
