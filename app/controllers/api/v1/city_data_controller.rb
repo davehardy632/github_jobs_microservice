@@ -2,7 +2,7 @@ class Api::V1::CityDataController < ApplicationController
 
   def index
     if valid_header?
-      render :json => JSON.parse(city_data_facade.quality_of_life_stats.to_json()), :status => :ok
+      render :json => JSON.parse(city_data_facade.quality_of_life_scores.to_json()), :status => :ok
     else
       invalid_header = {
         error: "Missing location header",
