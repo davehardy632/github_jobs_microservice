@@ -9,10 +9,15 @@ class TeleportCityScoresService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-
   def conn
-    Faraday.new(url: "#{slug_url}" + "scores") do |f|
-      f.adapter Faraday.default_adapter
+    if slug_url.split("/")[4] == "urban_areas"
+      Faraday.new(url: "#{slug_url}" + "scores") do |f|
+        f.adapter Faraday.default_adapter
+      end
+    else
+      Faraday.new(url: slug_url) do |f|
+        f.adapter Faraday.default_adapter
+      end
     end
   end
 
