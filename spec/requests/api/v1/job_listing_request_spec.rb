@@ -34,7 +34,7 @@ describe "Jooble Job listings api" do
 
     error_message = JSON.parse(response.body)
 
-    expect(error_message).to eq({"error"=>"Missing required parameters", "status"=>400})
+    expect(error_message).to eq({"error"=>"Missing required headers", "status"=>400})
   end
 
   it "Returns error message for missing required parameter" do
@@ -43,7 +43,7 @@ describe "Jooble Job listings api" do
 
     error_message = JSON.parse(response.body)
 
-    expect(error_message).to eq({"error"=>"Missing required parameters", "status"=>400})
+    expect(error_message).to eq({"error"=>"Missing required headers", "status"=>400})
   end
 
   it "Returns a response for just the keyword parameter" do
