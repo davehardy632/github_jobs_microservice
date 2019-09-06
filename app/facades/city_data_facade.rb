@@ -12,23 +12,14 @@ class CityDataFacade
     teleport_location_service.closest_urban_area[:_embedded][:"location:nearest-urban-areas"][0][:_links][:"location:nearest-urban-area"][:href]
   end
 
-  # def city_data_info
-  #   teleport_city_search.return_city_data
-  # end
-  #
-  # def city_info_url
-  #   city_data_info[:_embedded][:"city:search-results"][0][:_links][:"city:item"][:href]
-  # end
-  #
-  # def urban_area_link
-  #   teleport_basic_city_info_service.basic_city_info[:_links][:"city:urban_area"][:href]
-  # end
+  def salaries_obj
+    teleport_city_salaries_service.return_salaries
+  end
 
-  # def quality_of_life_scores
-  #   urban_area_url
-  #   binding.pry
-  # end
-  #
+  def average_salaries
+    salaries_obj[:salaries]
+  end
+
   def urban_area_scores
     teleport_city_scores_service.return_scores
   end
@@ -60,17 +51,13 @@ class CityDataFacade
   private
 
   attr_reader :location
-  #
-  # def teleport_city_search
-  #   TeleportCitySearchService.new(location)
-  # end
-  #
-  # def teleport_basic_city_info_service
-  #   TeleportBasicCityInfoService.new(city_info_url)
-  # end
 
   def teleport_city_scores_service
     TeleportCityScoresService.new(urban_area_url)
+  end
+
+  def teleport_city_salaries_service
+    TeleportCitySalariesService.new(urban_area_url)
   end
 
   def teleport_location_service
