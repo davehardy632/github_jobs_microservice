@@ -5,7 +5,7 @@ class Api::V1::ListingsController < ApplicationController
       render :json => JSON.parse(listings_facade.return_all_listings.to_json()), :status => :ok
     else
       payload = {
-        error: "Missing required parameters",
+        error: "Missing required headers",
         status: 400
       }
         render :json => payload, :status => :unauthorized
