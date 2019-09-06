@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/listings', to: 'listings#index'
-      get '/city_data', to: 'city_data#index'
+      get '/urban_area_scores', to: 'urban_area_scores#index'
     end
   end
 end
