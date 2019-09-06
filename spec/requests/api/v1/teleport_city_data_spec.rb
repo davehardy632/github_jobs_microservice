@@ -8,7 +8,7 @@ describe "Teleport api" do
     expect(response).to be_successful
 
     city_info = JSON.parse(response.body)
-
+binding.pry
     expect(city_info.length).to eq(3)
   end
 end
