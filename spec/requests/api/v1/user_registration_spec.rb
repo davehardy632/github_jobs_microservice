@@ -8,9 +8,15 @@ describe "User Registration" do
       "HTTP_EMAIL" => "patrick@goulding.com", 
       "HTTP_PASSWORD" => "pat_is_awesome", 
       "HTTP_PASSWORD_CONFIRMATION" => "pat_is_awesome" }
-
+    reponse_body = {
+      "first_name": "Patrick",
+      "last_name": "Goulding",
+      "email": "patrick@goulding.com",
+      "api_key": "A1234"
+    }
     expect(response).to be_successful
     api_response = JSON.parse(response.body)
-    expect(api_response).
+    expect(api_response.keys).to eq(["first_name", "last_name", "email", "api_key"])
+    expect(User.last.email).to eq("patrick@goulding.com")
   end 
 end 
