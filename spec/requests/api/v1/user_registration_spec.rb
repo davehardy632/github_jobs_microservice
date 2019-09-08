@@ -19,4 +19,6 @@ describe "User Registration" do
     expect(api_response.keys).to eq(["first_name", "last_name", "email", "api_key"])
     expect(User.last.email).to eq("patrick@goulding.com")
   end 
+
+  # it "user cannot register if email alreayd exists"
 end 
