@@ -19,7 +19,6 @@ class CityInfoFacade
     response_obj[:full_name] = raw_data[:full_name]
     response_obj[:population] = raw_data[:population]
     response_obj
-    binding.pry
   end
 
   private
