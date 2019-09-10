@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: github_jobs_microservice_development
+  database: listings_and_city_microservice_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: github_jobs_microservice_test
+  database: listings_and_city_microservice_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: github_jobs_microservice_production
-  username: github_jobs_microservice
-  password: <%= ENV['GITHUB_JOBS_MICROSERVICE_DATABASE_PASSWORD'] %>
+  database: listings_and_city_microservice_production
+  username: listings_and_city_microservice
+  password: <%= ENV['LISTINGS_AND_CITY_MICROSERVICE_DATABASE_PASSWORD'] %>
