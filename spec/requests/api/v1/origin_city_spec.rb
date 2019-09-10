@@ -7,7 +7,7 @@ describe "Teleport Api return origin city data" do
     expect(response).to be_successful
 
     city_info = JSON.parse(response.body)
-binding.pry
+
     expect(city_info.count).to eq(3)
   end
 end
