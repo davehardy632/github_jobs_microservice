@@ -32,3 +32,4 @@ Things you may want to cover:
 | api/v1/urban_area/salaries | GET | N/A | location | N/A | ```[ {  job:{     id:`job id`,    title: `job title`  }  salary_percentiles: {    percentile_25,    percentile_50,    percentile_75,   }  } } ] ``` |
 | /api/v1/urban_area/images | GET | N/A | location | N/A | ``` {   mobile: `mobile app image`,   web: `web app image`  } ``` |
 | /api/v1/urban_area/scores | GET | N/A | location | N/A | ``` {   teleport_city_score: `total aggregate score`,   summary:`City Summary`,   categories:[     color:`color code of score for html/css`,     name: `category`     score_out_of_10:`Score out of 10 for category`   ] } ``` |
+| /api/v1/city_info | GET | N/A | location | N/A | {,"full_name": "City, State, Country",,"population": number} |
