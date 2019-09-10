@@ -7,9 +7,9 @@ class Api::V1::CityInfoController < ApplicationController
     else
       invalid_header = {
         error: "Missing location header",
-        status: 400
+        status: 406
       }
-        render :json => invalid_header, :status => :unauthorized
+        render :json => invalid_header, :status => :bad_request
       end
   end
 
