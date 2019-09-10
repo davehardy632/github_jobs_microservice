@@ -2,11 +2,11 @@ require "rails_helper"
 
 describe "User Registration" do
   it "user enters Credentials correctly and is registered with the application" do
-    post "/api/v1/users", headers: { 
-      "HTTP_FIRST_NAME" => "Patrick", 
-      "HTTP_LAST_NAME" => "Goulding", 
-      "HTTP_EMAIL" => "patrick@goulding.com", 
-      "HTTP_PASSWORD" => "pat_is_awesome", 
+    post "/api/v1/users", headers: {
+      "HTTP_FIRST_NAME" => "Patrick",
+      "HTTP_LAST_NAME" => "Goulding",
+      "HTTP_EMAIL" => "patrick@goulding.com",
+      "HTTP_PASSWORD" => "pat_is_awesome",
       "HTTP_PASSWORD_CONFIRMATION" => "pat_is_awesome" }
     reponse_body = {
       "first_name": "Patrick",
@@ -18,7 +18,7 @@ describe "User Registration" do
     api_response = JSON.parse(response.body)
     expect(api_response.keys).to eq(["first_name", "last_name", "email", "api_key"])
     expect(User.last.email).to eq("patrick@goulding.com")
-  end 
+  end
 
   it "user cannot register if email already exists" do
     User.create(
@@ -29,11 +29,11 @@ describe "User Registration" do
       api_key: "A1234"
     )
 
-    post "/api/v1/users", headers: { 
-      "HTTP_FIRST_NAME" => "Patrick", 
-      "HTTP_LAST_NAME" => "Goulding", 
-      "HTTP_EMAIL" => "patrick@goulding.com", 
-      "HTTP_PASSWORD" => "pat_is_awesome", 
+    post "/api/v1/users", headers: {
+      "HTTP_FIRST_NAME" => "Patrick",
+      "HTTP_LAST_NAME" => "Goulding",
+      "HTTP_EMAIL" => "patrick@goulding.com",
+      "HTTP_PASSWORD" => "pat_is_awesome",
       "HTTP_PASSWORD_CONFIRMATION" => "pat_is_awesome" }
 
     reponse_body = {
@@ -43,22 +43,19 @@ describe "User Registration" do
       "api_key": "A1234"
     }
 
-    registration_error = {
-      error: "Choose a different Email",
-      status: 400
-    }
+    registration_error = {"error"=>"Choose a different Email", "status"=>400}
 
     email_failure = JSON.parse(response.body)
     expect(email_failure).to eq(registration_error)
   end
 
-  it "password and password confirmation must match"  do 
+  it "password and password confirmation must match"  do
 
-    post "/api/v1/users", headers: { 
-      "HTTP_FIRST_NAME" => "Patrick", 
-      "HTTP_LAST_NAME" => "Goulding", 
-      "HTTP_EMAIL" => "patrick@goulding.com", 
-      "HTTP_PASSWORD" => "pat_is_awesome", 
+    post "/api/v1/users", headers: {
+      "HTTP_FIRST_NAME" => "Patrick",
+      "HTTP_LAST_NAME" => "Goulding",
+      "HTTP_EMAIL" => "patrick@goulding.com",
+      "HTTP_PASSWORD" => "pat_is_awesome",
       "HTTP_PASSWORD_CONFIRMATION" => "potatoes_awesome" }
 
     reponse_body = {
@@ -75,4 +72,4 @@ describe "User Registration" do
     email_failure = JSON.parse(response.body)
     expect(email_failure).to eq(password_error)
   end
-end 
+end

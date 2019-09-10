@@ -8,6 +8,6 @@ describe "Teleport Api return origin city data" do
 
     city_info = JSON.parse(response.body)
 
-    expect(city_info.count).to eq(3)
+    expect(city_info.count).to eq(2)
   end
 end
