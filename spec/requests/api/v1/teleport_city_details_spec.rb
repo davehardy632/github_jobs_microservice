@@ -1,6 +1,10 @@
 require 'rails_helper'
+require 'webmock/rspec'
 
 describe "Teleport api" do
+  before :each do
+    WebMock.disable!
+  end
   it "A user can get data about a given city" do
 
     get '/api/v1/urban_area/details', headers: { 'HTTP_LOCATION' => "Denver, CO" }
