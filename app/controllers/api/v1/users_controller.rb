@@ -23,7 +23,7 @@ class Api::V1::UsersController < ApplicationController
         "first_name": user.first_name,
         "last_name": user.last_name,
         "email": user.email,
-        "api_key": user.api_key 
+        "api_key": user.api_key
       }, status: :created
 
       else
@@ -33,33 +33,24 @@ class Api::V1::UsersController < ApplicationController
       end
     end
   end
-  
+
   private
-  
-  def check_headers     
+
+  def check_headers
     headers.each do | header |
-      if header == nil
-        return false 
-      else 
+      if header != nil
         return true
       end
     end
   end
+
   def headers
     [
-      request.env["HTTP_FIRST_NAME"], 
-      request.env["HTTP_LAST_NAME"], 
-      request.env["HTTP_EMAIL"], 
-      request.env["HTTP_PASSWORD"], 
-      request.env["HTTP_PASSWORD_CONFIRMATION"] 
+      request.env["HTTP_FIRST_NAME"],
+      request.env["HTTP_LAST_NAME"],
+      request.env["HTTP_EMAIL"],
+      request.env["HTTP_PASSWORD"],
+      request.env["HTTP_PASSWORD_CONFIRMATION"]
     ]
-
-    # check to see if all the headers are present, 
-    # if True:
-    # check if email not taken
-    # if True:
-    # Create a User
-    # Generate API KEy for User
-    # Send back: correct reasponse 
   end
 end
