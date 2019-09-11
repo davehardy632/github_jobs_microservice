@@ -1,27 +1,36 @@
-# README
+Listings and city Microservice is a backend api Developed in Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  For a more informed job search, explore where to move based on your personal preferences.
 
-Things you may want to cover:
+  The application was built with the purpose of creating a job listing site, that allows a user to access information about the locations that are associated with the job listings. A user then has access to a variety of useful information about the location of the job. They can then make more informed decisions about relocating, and considering other options to aid in their job search.
 
-* Ruby version
+The application consumes 2 api's.
 
-* System dependencies
+  The first is Jooble, Jooble is a job listings api that returns listing based on 4 criteria. 1. Keywords: any keyword relating to jobs can be entered. 2. Location: this can be a city/state, or zip code. 3. Salary: this can range betweem 33500 - 200000. 4. Radius: this can be a distance within 0, 5, 10, 15, 25, and 50 miles from the desired location. 5. Page: By default Jooble will return 20 results per api call. Page 1 refers to the first 20 results, page 2 would return the second 20 results, and so on. 
 
-* Configuration
+  The second API being consumed is Teleport. Teleport offers a range of useful data that allows you to compare cities based on quality of life, cost of living, salaries and more. Listings and City Microservice takes these two api's with the goal of merging the functionality in the frontend. The endpoints below allow a user to access information about the nearest urban area of a given city.
+  
+  The endpoints listed below return the following information. 
+    The urban_area endpoints aggregate and present all of the most useful statistics, scores, images, and details associated with major urban areas around the world.
+    The city info endpoint was implemented so that a user can see very basic information about any given city, and is used as a reference point. When a user passes a city or location into any of the urban area endpoints, they will always return info about the closest urban area to that endpoint, so being able to see info about the original city is a logical piece of information to be made available to a user.
+    The listings endpoint will return a response as explained above.
+    The users endpoint is implemented for registration functionality, and the sessions endpoint is for user login.
 
-* Database creation
 
-* Database initialization
+To access the jooble api, register for an api key on their site and include it in your env variables in an application.yml file
 
-* How to run the test suite
+This application uses ruby version 2.4.1
 
-* Services (job queues, cache servers, search engines, etc.)
+To set up the application
+  - clone the repository
+  - cd into the repository
+  - run $ "bundle" from the command line
+  - run $ "rails g rspec install" to set up your test suite
+  - run $ "rails db:create" to create the database
+  - run $ "rails db:migrate" to create a users table in the database
+  - run $ "rails s" to spin up the server
+  - to hit endpoints append /api/v1/whatever endpoint you choose
 
-* Deployment instructions
-
-* End Points
 
 | URL | VERB | BODY | HEADERS | PARAMS | RESPONSE |
 |----------------------------|------|------|--------------------------------------------------------------------------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
