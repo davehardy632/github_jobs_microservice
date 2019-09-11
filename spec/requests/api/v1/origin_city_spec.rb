@@ -1,6 +1,10 @@
 require 'rails_helper'
+require 'webmock/rspec'
 
 describe "Teleport Api return origin city data" do
+  before :each do
+    WebMock.disable!
+  end
   it "When a location header is sent for a city, that citys general info is returned" do
     get '/api/v1/city_info', headers: { 'HTTP_LOCATION' => "Louisville, CO" }
 

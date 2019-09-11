@@ -1,6 +1,10 @@
 require "rails_helper"
+require 'webmock/rspec'
 
 describe "User Registration" do
+  before :each do
+    WebMock.disable!
+  end
   it "user enters Credentials correctly and is registered with the application" do
     post "/api/v1/users", headers: {
       "HTTP_FIRST_NAME" => "Patrick",
