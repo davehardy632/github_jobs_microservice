@@ -30,4 +30,13 @@ describe "Teleport api" do
 
     expect(city_details).to eq({"message"=>"There are no details available for this city."})
   end
+
+  it "If the endpoint is hit without required headers, an error message is sent" do
+
+    get '/api/v1/urban_area/details'
+
+    error_message = JSON.parse(response.body)
+
+    expect(error_message).to eq({"error"=>"Missing location header", "status"=>400})
+  end
 end

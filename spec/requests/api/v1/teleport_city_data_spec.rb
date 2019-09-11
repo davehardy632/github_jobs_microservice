@@ -49,6 +49,24 @@ describe "Teleport api" do
     expect(city_info.keys).to eq(["full_name", "population", "status"])
   end
 
+  it "If the endpoint is hit without required headers, an error message is sent" do
+
+    get '/api/v1/urban_area/scores'
+
+    error_message = JSON.parse(response.body)
+
+    expect(error_message).to eq({"error"=>"Missing location header", "status"=>400})
+  end
+
+  it "If the endpoint is hit without required headers, an error message is sent" do
+
+    get '/api/v1/urban_area/salaries'
+
+    error_message = JSON.parse(response.body)
+
+    expect(error_message).to eq({"error"=>"Missing location header", "status"=>400})
+  end
+
 
   it "If a city is passed in that doesn't return nearest urban area the city data is returned" do
 
