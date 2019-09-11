@@ -9,7 +9,7 @@ class Api::V1::ListingsController < ApplicationController
         status: 400
       }
         render :json => payload, :status => :unauthorized
-      end
+    end
   end
 
   private
