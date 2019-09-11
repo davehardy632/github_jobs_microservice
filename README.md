@@ -20,10 +20,6 @@
     The listings endpoint will return a response as explained above.
     The users endpoint is implemented for registration functionality, and the sessions endpoint is for user login.</p>
 
-<h3>Api access</h3>
-
-<p>To access the jooble api, register for an api key on their site and include it in your env variables in an application.yml file</p>
-
 This application uses ruby version 2.4.1
 
 To set up the application
@@ -34,9 +30,29 @@ To set up the application
   - run $ ``rails g rspec install`` to set up your test suite
   - run $ ``rails db:create`` to create the database
   - run $ ``rails db:migrate`` to create a users table in the database
-  - run $ ````
+  - run $ ``bundle exec figaro install`` to create an application.yml file
   - run $ ``rails s`` to spin up the server
   - to hit the endpoints append /api/v1/whatever endpoint you choose
+  
+ <h3>Api access</h3>
+
+<h4>This api requires 2 api keys to access the datapoints</h4>
+
+<ul>
+  <li>Jooble Api key</li>
+    <p>To acquire a jooble api key, register for an api key on their site here https://us.jooble.org/api/about and include it in your env variables in an application.yml file</p>
+  <li>Google Geocode Api key</li>
+    <p>The api needed to retrieve latitude and longitude can be aquired via googles public api's, from the google maps platform. The link can be found here https://developers.google.com/maps/documentation/</p>
+</ul>
+
+<h4>application.yml env variables</h4>
+
+<p>When you aquire your api keys from Jooble and Google Geocode Api, include them in your application.yml file as follows</p>
+
+<ul>
+  <li>JOOBLE_API_KEY: ``jooble api key goes here``</li>
+  <li>GOOGLE_GEOCODE_API_KEY: ``google geocode api key goes here``</li>
+</ul>
 
 
 | URL | VERB | BODY | HEADERS | PARAMS | RESPONSE |
@@ -49,3 +65,13 @@ To set up the application
 | /api/v1/urban_area/images | GET | N/A | location | N/A | ``` {   mobile: `mobile app image`,   web: `web app image`  } ``` |
 | /api/v1/urban_area/scores | GET | N/A | location | N/A | ``` {   teleport_city_score: `total aggregate score`,   summary:`City Summary`,   categories:[     color:`color code of score for html/css`,     name: `category`     score_out_of_10:`Score out of 10 for category`   ] } ``` |
 | /api/v1/city_info | GET | N/A | location | N/A | {,"full_name": "City, State, Country",,"population": number} |
+
+
+
+## Team Members
+| Name | Github | Team |
+|:----------------:|:----------------------------------:|:----------:|
+| David Hardy | https://github.com/davehardy632 | Back End |
+| DeMarcus Kirby | https://github.com/KirbyDD | Front End |
+| Jacqueline Moore | https://github.com/jacquelinebelle | Front End |
+| Patrick Goulding | https://github.com/pgoulding | Full Stack |
