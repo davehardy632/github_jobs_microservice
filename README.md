@@ -1,4 +1,4 @@
-<h1>Listings and city Microservice is a backend api Developed in Rails.</h1>
+<h1>Listings and City Microservice is a backend api developed in Rails</h1>
 
   For a more informed job search, explore where to move based on your personal preferences.
 
