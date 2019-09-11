@@ -1,10 +1,10 @@
-Listings and city Microservice is a backend api Developed in Rails.
+<h1>Listings and city Microservice is a backend api Developed in Rails.</h1>
 
   For a more informed job search, explore where to move based on your personal preferences.
 
   The application was built with the purpose of creating a job listing site, that allows a user to access information about the locations that are associated with the job listings. A user then has access to a variety of useful information about the location of the job. They can then make more informed decisions about relocating, and considering other options to aid in their job search.
 
-The application consumes 2 api's.
+<h2>The application consumes 2 api's.</h2>
 
   The first is Jooble, Jooble is a job listings api that returns listing based on 4 criteria. 1. Keywords: any keyword relating to jobs can be entered. 2. Location: this can be a city/state, or zip code. 3. Salary: this can range betweem 33500 - 200000. 4. Radius: this can be a distance within 0, 5, 10, 15, 25, and 50 miles from the desired location. 5. Page: By default Jooble will return 20 results per api call. Page 1 refers to the first 20 results, page 2 would return the second 20 results, and so on. 
 
@@ -22,10 +22,11 @@ To access the jooble api, register for an api key on their site and include it i
 This application uses ruby version 2.4.1
 
 To set up the application
+
   - clone the repository
   - cd into the repository
   - run $ "bundle" from the command line
-  - run $ "rails g rspec install" to set up your test suite
+  - run $ ``rails g rspec install`` to set up your test suite
   - run $ "rails db:create" to create the database
   - run $ "rails db:migrate" to create a users table in the database
   - run $ "rails s" to spin up the server
