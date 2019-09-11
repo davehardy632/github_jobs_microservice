@@ -27,10 +27,10 @@ To set up the application
   - cd into the repository
   - run $ "bundle" from the command line
   - run $ ``rails g rspec install`` to set up your test suite
-  - run $ "rails db:create" to create the database
-  - run $ "rails db:migrate" to create a users table in the database
-  - run $ "rails s" to spin up the server
-  - to hit endpoints append /api/v1/whatever endpoint you choose
+  - run $ ``rails db:create`` to create the database
+  - run $ ``rails db:migrate`` to create a users table in the database
+  - run $ ``rails s`` to spin up the server
+  - to hit the endpoints append /api/v1/whatever endpoint you choose
 
 
 | URL | VERB | BODY | HEADERS | PARAMS | RESPONSE |
