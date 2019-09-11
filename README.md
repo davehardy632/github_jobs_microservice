@@ -66,7 +66,7 @@ To set up the application
 | /api/v1/urban_area/scores | GET | N/A | location | N/A | ``` {   teleport_city_score: `total aggregate score`,   summary:`City Summary`,   categories:[     color:`color code of score for html/css`,     name: `category`     score_out_of_10:`Score out of 10 for category`   ] } ``` |
 | /api/v1/city_info | GET | N/A | location | N/A | {,"full_name": "City, State, Country",,"population": number} |
 
-
+[![Build Status](https://travis-ci.org/davehardy632/listings_and_city_microservice.svg?branch=master)](https://travis-ci.org/davehardy632/listings_and_city_microservice)
 
 ## Team Members
 | Name | Github | Team |
