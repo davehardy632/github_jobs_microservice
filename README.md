@@ -53,10 +53,10 @@ To set up the application
 
 <p>When you aquire your api keys from Jooble and Google Geocode Api, include them in your application.yml file as follows</p>
 
-<ul>
-  <li>JOOBLE_API_KEY: ``jooble api key goes here``</li>
-  <li>GOOGLE_GEOCODE_API_KEY: ``google geocode api key goes here``</li>
-</ul>
+
+  JOOBLE_API_KEY: ``jooble api key goes here``
+  GOOGLE_GEOCODE_API_KEY: ``google geocode api key goes here``
+
 
 
 | URL | VERB | BODY | HEADERS | PARAMS | RESPONSE |
