@@ -13,6 +13,10 @@
 <h3>Jooble Job Search Api</h3>
 
   The first is Jooble, Jooble is a job listings api that returns listing based on 4 criteria. 1. Keywords: any keyword relating to jobs can be entered. 2. Location: this can be a city/state, or zip code. 3. Salary: this can range betweem 33500 - 200000. 4. Radius: this can be a distance within 0, 5, 10, 15, 25, and 50 miles from the desired location. 5. Page: By default Jooble will return 20 results per api call. Page 1 refers to the first 20 results, page 2 would return the second 20 results, and so on. 
+  
+  On the front end the listings are displayed like this..
+  
+  <img width="1440" alt="Screen Shot 2019-09-12 at 11 52 27 AM" src="https://user-images.githubusercontent.com/42919604/64808134-326f4e00-d586-11e9-916c-4e10adb0b864.png">
 
 <h3>Teleport Api</h3>
 
