@@ -78,6 +78,8 @@ To set up the application
 | /api/v1/urban_area/scores | GET | N/A | location | N/A | ``` {   teleport_city_score: `total aggregate score`,   summary:`City Summary`,   categories:[     color:`color code of score for html/css`,     name: `category`     score_out_of_10:`Score out of 10 for category`   ] } ``` |
 | /api/v1/city_info | GET | N/A | location | N/A | {,"full_name": "City, State, Country",,"population": number} |
 
+```json [,{,"job": {,"id": "ACCOUNT-MANAGER",,"title": "Account Manager",},,"salary_percentiles": {,"percentile_25": 48359.24980262868,,"percentile_50": 60546.379567221855,,"percentile_75": 75804.81694111877,},},,{,"job": {,"id": "ACCOUNTANT",,"title": "Accountant",},,"salary_percentiles": {,"percentile_25": 44006.336610435494,,"percentile_50": 52262.44610682697,,"percentile_75": 62067.4994432799,},},,{,"job": {,"id": "ADMINISTRATIVE-ASSISTANT",,"title": "Administrative Assistant",},,"salary_percentiles": {,"percentile_25": 29838.241314996958,,"percentile_50": 35934.14653391258,,"percentile_75": 43275.435488609095,},}] ``` 
+
 [![Build Status](https://travis-ci.org/davehardy632/listings_and_city_microservice.svg?branch=master)](https://travis-ci.org/davehardy632/listings_and_city_microservice)
 
 ## Team Members
