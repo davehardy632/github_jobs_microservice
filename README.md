@@ -4,7 +4,7 @@
 
 <h2>For a more informed job search, explore where to move based on your personal preferences.</h2>
 
-<h2>Listings and City Microservice is a backend api developed in Rails, it is used in a deployed application called Compass</h2>
+<h3>This repository is a backend api developed using Rails, it is used in a deployed application called Compass</h3>
 
   The application was built with the purpose of creating a job listing site, that allows a user to access information about the locations that are associated with the job listings. A user then has access to a variety of useful information about the location of the job. They can then make more informed decisions about relocating, and considering other options to aid in their job search.
 
