@@ -112,6 +112,7 @@ To set up the application
 
 [![Build Status](https://travis-ci.org/davehardy632/listings_and_city_microservice.svg?branch=master)](https://travis-ci.org/davehardy632/listings_and_city_microservice)
 
+
 ## Team Members
 | Name | Github | Team |
 |:----------------:|:----------------------------------:|:----------:|
