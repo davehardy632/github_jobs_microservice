@@ -22,6 +22,10 @@
 
   <p>The second API being consumed is Teleport. Teleport offers a range of useful data that allows you to compare cities based on quality of life, cost of living, salaries and more. Listings and City Microservice takes these two api's with the goal of merging the functionality in the frontend. The endpoints below allow a user to access information about the nearest urban area of a given city.</p>
   
+  On the front end the teleport api data is displayed to compare a job location with pertinent details of the nearest urban ares
+  
+  <img width="1124" alt="Screen Shot 2019-09-12 at 11 56 03 AM" src="https://user-images.githubusercontent.com/42919604/64808368-a4e02e00-d586-11e9-97cb-d492b9c92976.png">
+  
   <p>The endpoints listed below return the following information. 
     The urban_area endpoints aggregate and present all of the most useful statistics, scores, images, and details associated with major urban areas around the world.
     The city info endpoint was implemented so that a user can see very basic information about any given city, and is used as a reference point. When a user passes a city or location into any of the urban area endpoints, they will always return info about the closest urban area to that endpoint, so being able to see info about the original city is a logical piece of information to be made available to a user.
