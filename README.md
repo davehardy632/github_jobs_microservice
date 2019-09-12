@@ -1,6 +1,8 @@
 
 ![compassLogo-test1](https://user-images.githubusercontent.com/42919604/64807517-dc4ddb00-d584-11e9-9e13-1ffbee231c78.png)
-<h1>For a more informed job search, explore where to move based on your personal preferences.</h1>
+
+
+<h2>For a more informed job search, explore where to move based on your personal preferences.</h2>
 
 <h2>Listings and City Microservice is a backend api developed in Rails, it is used in a deployed application called Compass</h2>
 
